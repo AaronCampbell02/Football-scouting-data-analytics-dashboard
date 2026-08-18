@@ -19,8 +19,8 @@ The Power BI dashboard (.pbix) is included in this repo.
 Transfermarkt (via Kaggle) | Player valuations, transfers, clubs, games | Historical, all seasons |
 FBref (via Kaggle) | Player performance stats (goals, assists, xG, xA, tackles, etc.) | 2017–18 to 2023–24 |
 
-Transfermarkt dataset: [Football Data from Transfermarkt – Kaggle](https://www.kaggle.com/datasets/davidcariboo/player-scores)
-FBref dataset: [FBRef 2017–2024 Top 5 Leagues – Kaggle](https://www.kaggle.com/datasets/akshankrithick/fbref-2017-2024-for-europes-top-5-leagues)
+Transfermarkt dataset: (https://www.kaggle.com/datasets/davidcariboo/player-scores)
+FBref dataset: (https://www.kaggle.com/datasets/akshankrithick/fbref-2017-2024-for-europes-top-5-leagues)
 
 
 ## How to Run
@@ -33,7 +33,7 @@ pip install pandas scikit-learn
 ### 2. Download the data
 - Download both Kaggle datasets above
 - Place the 8 Transfermarkt CSVs in a `data/` folder
-- Place the 7 FBref `cleaned_YYYY-YY.csv` files in the same `data/` folder
+- Place the 7 FBref `cleaned_...` files in the same `data/` folder
 
 ### 3. Run scripts
 ```
@@ -53,9 +53,9 @@ A **Random Forest Regressor** trained to predict player market value from FBref 
 
 **Features:** age, position, goals, assists, xG, xA, progressive carries/passes, tackles, interceptions, clearances, pass completion, key passes, take-ons, shots, aerial duels, GK-specific stats (saves, clean sheets, etc.)
 
-**Target:** `market_value_in_eur` (Transfermarkt season-end valuation)
+**Target:** `market_value_in_eur` (Transfermarkt valuation)
 
 **Results:**
 - Baseline R² (log scale): 0.662
-- Tuned R² (log scale): **0.665** (RandomizedSearchCV, 20 iterations, 3-fold CV)
-- MAE: ~€5.5M
+- Tuned R² (log scale): **0.665**
+- MAE: €5.5M
