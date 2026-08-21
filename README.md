@@ -59,3 +59,5 @@ A **Random Forest Regressor** trained to predict player market value from FBref 
 - Baseline R² (log scale): 0.662
 - Tuned R² (log scale): **0.665**
 - MAE: €5.5M
+
+[Football analytics dashboard.pdf](https://github.com/user-attachments/files/31305177/Football.analytics.dashboard.pdf)
